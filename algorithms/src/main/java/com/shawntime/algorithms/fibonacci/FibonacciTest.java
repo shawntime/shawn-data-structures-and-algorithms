@@ -12,10 +12,10 @@ import java.util.Stack;
 public class FibonacciTest {
 
     public static void main(String[] args) {
-        int n = 7;
+        int n = 40;
         System.out.println(fib1(n));
         System.out.println(fib2(n));
-        System.out.println(fib2(n));
+        System.out.println(fib3(n));
     }
 
     public static int fib1(int n) {
@@ -47,13 +47,13 @@ public class FibonacciTest {
         stack.push(0);
         stack.push(1);
         for (int i = 0; i < n - 1; ++i) {
-            Integer first = stack.pop();
             Integer second = stack.pop();
+            Integer first = stack.pop();
             int sum = first + second;
             stack.push(second);
             stack.push(sum);
         }
-        return stack.peek();
+        return stack.pop();
     }
 
 }
