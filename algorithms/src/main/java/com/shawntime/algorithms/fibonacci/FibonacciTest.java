@@ -22,7 +22,7 @@ public class FibonacciTest {
         if (n <= 1) {
             return n;
         }
-        return fib2(n - 1) + fib2(n - 2);
+        return fib1(n - 1) + fib1(n - 2);
     }
 
     public static int fib2(int n) {
