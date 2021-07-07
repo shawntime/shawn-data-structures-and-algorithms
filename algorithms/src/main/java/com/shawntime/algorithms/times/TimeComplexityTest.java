@@ -172,4 +172,31 @@ public class TimeComplexityTest {
             System.out.println(array[i] + c);
         }
     }
+
+    /**
+     * 执行次数：3n + 1 + 3m + 1 = 3(m + n) + 2
+     * O(m + n)
+     */
+    public static void test9(int n, int m) {
+        /**
+         * i = 0 : 1
+         * i < n : n
+         * ++i : n
+         * System.out.println : n
+         * 3n + 1
+         */
+        for (int i = 0; i < n; ++i) {
+            System.out.println("i:" + i);
+        }
+        /**
+         * i = 0 : 1
+         * i < m : m
+         * ++i : m
+         * System.out.println : m
+         * 3m + 1
+         */
+        for (int i = 0; i < m; ++i) {
+            System.out.println("m:" + i);
+        }
+    }
 }
