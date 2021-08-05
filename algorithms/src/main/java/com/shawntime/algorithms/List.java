@@ -2,6 +2,8 @@ package com.shawntime.algorithms;
 
 public interface List<E> {
 
+    int INDEX_NOT_FOUND = -1;
+
     boolean add(E element);
 
     boolean add(int index, E element);
@@ -19,4 +21,8 @@ public interface List<E> {
     boolean isEmpty();
 
     int size();
+
+    E get(int index);
+
+    E set(int index, E element);
 }

@@ -8,8 +8,6 @@ public class ArrayList<E> extends AbstractList<E> {
 
     private static final int DEFAULT_CAPACITY = 16;
 
-    private static final int INDEX_NOT_FOUND = -1;
-
     public ArrayList() {
         this(DEFAULT_CAPACITY);
     }
@@ -79,11 +77,6 @@ public class ArrayList<E> extends AbstractList<E> {
     }
 
     @Override
-    public boolean contains(E element) {
-        return indexOf(element) >= 0;
-    }
-
-    @Override
     public void clear() {
         for (int i = 0; i < size; ++i) {
             elements[i] = null;
@@ -92,13 +85,16 @@ public class ArrayList<E> extends AbstractList<E> {
     }
 
     @Override
-    public boolean isEmpty() {
-        return size <= 0;
+    public E get(int index) {
+        rangeCheck(index);
+        return elements[index];
     }
 
     @Override
-    public int size() {
-        return size;
+    public E set(int index, E element) {
+        E oleElement = get(index);
+        elements[index] = element;
+        return oleElement;
     }
 
     @Override
