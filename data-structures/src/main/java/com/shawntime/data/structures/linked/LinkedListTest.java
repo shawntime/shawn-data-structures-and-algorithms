@@ -1,6 +1,6 @@
-package com.shawntime.algorithms.linked;
+package com.shawntime.data.structures.linked;
 
-import com.shawntime.algorithms.List;
+import com.shawntime.data.structures.List;
 
 public class LinkedListTest {
 

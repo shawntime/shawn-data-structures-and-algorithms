@@ -1,6 +1,6 @@
-package com.shawntime.algorithms.linked;
+package com.shawntime.data.structures.linked;
 
-import com.shawntime.algorithms.AbstractList;
+import com.shawntime.data.structures.AbstractList;
 
 /**
  * 单向链表
