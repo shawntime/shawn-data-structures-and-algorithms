@@ -1,4 +1,4 @@
-package com.shawntime.algorithms;
+package com.shawntime.data.structures;
 
 public interface List<E> {
 

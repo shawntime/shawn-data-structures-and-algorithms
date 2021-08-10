@@ -1,6 +1,6 @@
-package com.shawntime.algorithms.array;
+package com.shawntime.data.structures.array;
 
-import com.shawntime.algorithms.AbstractList;
+import com.shawntime.data.structures.AbstractList;
 
 public class ArrayList<E> extends AbstractList<E> {
 
