@@ -1,4 +1,4 @@
-package com.shawntime.leecode;
+package com.shawntime.leecode.链表;
 
 /**
  * https://leetcode-cn.com/problems/delete-node-in-a-linked-list/
