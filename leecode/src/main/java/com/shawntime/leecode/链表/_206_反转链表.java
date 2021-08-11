@@ -1,4 +1,4 @@
-package com.shawntime.leecode;
+package com.shawntime.leecode.链表;
 
 /**
  * https://leetcode-cn.com/problems/reverse-linked-list/
