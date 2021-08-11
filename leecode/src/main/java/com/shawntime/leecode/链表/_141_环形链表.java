@@ -14,11 +14,14 @@ public class _141_环形链表 {
         }
         ListNode first = head;
         ListNode second = head.next;
-        while (second != null && second.next != null && first != second) {
+        while (second != null && second.next != null) {
             first = first.next;
             second = second.next.next;
+            if (first == second) {
+                return true;
+            }
         }
-        return second != null && second.next != null;
+        return false;
     }
 
     class ListNode {
