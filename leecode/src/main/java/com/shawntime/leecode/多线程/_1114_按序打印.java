@@ -1,4 +1,4 @@
-package com.shawntime.leecode;
+package com.shawntime.leecode.多线程;
 
 import java.util.concurrent.CountDownLatch;
 
