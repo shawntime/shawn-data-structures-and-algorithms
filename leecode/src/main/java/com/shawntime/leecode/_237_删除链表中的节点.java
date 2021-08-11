@@ -13,4 +13,14 @@ public class _237_删除链表中的节点 {
         node.val = next.val;
         node.next = next.next;
     }
+
+    public class ListNode {
+        int val;
+
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
 }
