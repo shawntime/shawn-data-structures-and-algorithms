@@ -55,6 +55,7 @@ public class ArrayList<E> extends AbstractList<E> {
         }
         size--;
         elements[size] = null;
+        reduceCapacity();
         return element;
     }
 
@@ -113,7 +114,22 @@ public class ArrayList<E> extends AbstractList<E> {
     private void ensureCapacity() {
         int length = elements.length;
         if (size == length - 1) {
+            // 1.5倍
             int newLength = length + (length >> 1);
+            E[] newElements = (E[]) new Object[newLength];
+            System.arraycopy(elements, 0, newElements, 0, size);
+            elements = newElements;
+        }
+    }
+
+    /**
+     * 缩容
+     */
+    private void reduceCapacity() {
+        int length = elements.length;
+        if (size <= length >> 2) {
+            // 1倍
+            int newLength = length >> 2;
             E[] newElements = (E[]) new Object[newLength];
             System.arraycopy(elements, 0, newElements, 0, size);
             elements = newElements;
